@@ -4,131 +4,41 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Play Pong</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+   <link rel="stylesheet" href="style_old.css">
 </head>
 
-
-
-<body>
-<div style="width: 100%; height: 100%; position: relative; background: white">
-    <div style="padding-top: 60px; padding-bottom: 80px; padding-left: 70px; padding-right: 86px; left: 260px; top: 105px; position: absolute; background: black; justify-content: flex-start; align-items: center; display: inline-flex">
-        <div style="width: 1024px; height: 780px; background: white; border-radius: 10px"></div>
-    </div>
-    <div style="width: 1440px; left: 0px; top: 0px; position: absolute">
-        <div style="width: 260px; height: 1025px; left: 0px; top: 0px; position: absolute">
-            <div style="width: 260px; height: 1025px; left: 0px; top: 0px; position: absolute; background: #2D2D2D"></div>
-            <div style="width: 224px; height: 43.04px; left: 20px; top: 200px; position: absolute; text-align: center; color: #00FFFF; font-size: 32px; font-family: Monospace; font-weight: 700; word-wrap: break-word">Play</div>
-            <div style="width: 224px; height: 43.04px; left: 20px; top: 300px; position: absolute; text-align: center; color: #00FFFF; font-size: 32px; font-family: Monospace; font-weight: 700; word-wrap: break-word">Chat</div>
-            <div style="width: 224px; height: 43.04px; left: 20px; top: 500px; position: absolute; text-align: center; color: #00FFFF; font-size: 32px; font-family: Monospace; font-weight: 700; word-wrap: break-word">Profile</div>
-            <div style="width: 224px; height: 43.04px; left: 20px; top: 600px; position: absolute; text-align: center; color: #00FFFF; font-size: 32px; font-family: Monospace; font-weight: 700; word-wrap: break-word">Match History</div>
-            <div style="width: 224px; height: 43.04px; left: 20px; top: 400px; position: absolute; text-align: center; color: #00FFFF; font-size: 32px; font-family: Monospace; font-weight: 700; word-wrap: break-word">Friends</div>
-            <div style="width: 192px; height: 51.31px; left: 50px; top: 25px; position: absolute">
-                <div style="width: 74.11px; height: 32.95px; left: 85.68px; top: 0px; position: absolute; color: #DA00FE; font-size: 16px; font-family: Monospace; font-weight: 700; word-wrap: break-word">PLAY</div>
-                <div style="width: 87.58px; height: 32.95px; left: 104.42px; top: 18.36px; position: absolute; color: #A100ED; font-size: 16px; font-family: Monospace; font-weight: 700; word-wrap: break-word">PONG</div>
-                <div style="width: 82px; height: 40.66px; left: 0px; top: 0.34px; position: absolute">
-                    <div style="width: 17.59px; height: 13.97px; left: 8.59px; top: 5.58px; position: absolute; background: white"></div>
-                    <div style="width: 3.15px; height: 5.06px; left: 25.64px; top: 4.96px; position: absolute; background: white"></div>
-                    <div style="width: 9.14px; height: 7.26px; left: 23.52px; top: 18.31px; position: absolute; background: white"></div>
-                    <div style="width: 3.13px; height: 5.05px; left: 53.23px; top: 4.88px; position: absolute; background: white"></div>
-                    <div style="width: 9.14px; height: 7.26px; left: 49.34px; top: 18.31px; position: absolute; background: white"></div>
-                    <div style="width: 17.59px; height: 13.97px; left: 55.82px; top: 5.58px; position: absolute; background: white"></div>
-                    <div style="width: 82px; height: 40.66px; left: 0px; top: 0px; position: absolute; background: white"></div>
-                    <div style="width: 10.25px; height: 8.14px; left: 35.88px; top: 30.37px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; background: white"></div>
-                    <div style="width: 10.25px; height: 8.14px; left: 46.30px; top: 30.37px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; background: white"></div>
-                    <div style="width: 10.25px; height: 8.14px; left: 56.20px; top: 30.37px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; background: white"></div>
-                    <div style="width: 32.06px; height: 8.99px; left: 57.04px; top: 29.85px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; background: white"></div>
-                </div>
-            </div>
-        </div>
-        <div style="width: 1180px; height: 105px; left: 260px; top: 0px; position: absolute">
-            <div style="width: 1180px; height: 105px; left: 0px; top: 0px; position: absolute; background: #2D2D2D"></div>
-            <div style="left: 120px; top: 40px; position: absolute; color: white; font-size: 20px; font-family: Courier New; font-weight: 400; word-wrap: break-word">username</div>
-            <div style="width: 30px; height: 30px; left: 760px; top: 40px; position: absolute">
-                <div style="width: 27.50px; height: 23.63px; left: 1.02px; top: 4px; position: absolute; background: white"></div>
-            </div>
-            <div style="width: 30px; height: 30px; left: 1060px; top: 40px; position: absolute; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border: 1px #2D2D2D solid">
-                <div style="width: 13.75px; height: 22.50px; left: 12.50px; top: 3.75px; position: absolute; background: white"></div>
-                <div style="width: 8.75px; height: 10px; left: 3.75px; top: 10px; position: absolute; background: white"></div>
-            </div>
-            <div style="width: 30px; height: 30px; left: 960px; top: 40px; position: absolute">
-                <div style="width: 27.76px; height: 27.76px; left: 0.88px; top: 2.49px; position: absolute; background: white"></div>
-            </div>
-            <img style="width: 30px; height: 30px; left: 70px; top: 40px; position: absolute; border-radius: 9999px" src="https://via.placeholder.com/30x30" />
-            <div style="width: 30px; height: 30px; left: 860px; top: 40px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
-                <div style="width: 30px; height: 30px; border: 1px black solid; justify-content: center; align-items: center; display: inline-flex">
-                    <div style="width: 30px; height: 30px; position: relative">
-                        <div style="width: 30px; height: 30px; left: 0px; top: 0px; position: absolute; border-radius: 29px; border: 1.50px white solid"></div>
-                        <div style="width: 4.50px; height: 21.42px; left: 21px; top: 4.29px; position: absolute; border: 1.50px white solid"></div>
-                        <div style="width: 4.50px; height: 21px; left: 9px; top: 4.50px; position: absolute; transform: rotate(180deg); transform-origin: 0 0; border: 1.50px white solid"></div>
-                        <div style="width: 0px; height: 30px; left: 15px; top: 0px; position: absolute; border: 1.50px white solid"></div>
-                        <div style="width: 0px; height: 30px; left: 30px; top: 15px; position: absolute; transform: rotate(-90deg); transform-origin: 0 0; border: 1.50px white solid"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<body>  
+    <div id="HomePage">
     
+        <div class="window-body">
+        <div class="window-page">
+            <img class="page-content" src="assets/arcade_img.png" alt="Pong's Time"/>
+        </div>
+        </div>
+
+        <div class="navbar">
+            <div class="navbar-vertical">
+                <img class="navbar-logo" src="assets/navbar_name.png" alt="Play Pong" />
+                <a class="nav-link" href="game">Game</a>
+                <a class="nav-link" href="chat">Chat</a>
+                <a class="nav-link" href="friends">Friends</a>
+                <a class="nav-link" href="profile">Profile</a>
+            </div>
+            <div class="navbar-horizontal">
+                <div class="user-info-display">
+                    <img class="avatar-icon" src="assets/avatar_icon.jpg" alt="avatar" />
+                    <p class="username-display">username</p>
+                </div>
+                <div class="nav-button">
+                    <span class="home-icon"><img src="assets/home_icon.png" alt="Home"/> </span>
+                    <span class="language-icon"><img src="assets/language_icon.png" alt="Languages" /> </span>
+                    <span class="settings-icon"><img src="assets/settings_icon.png" alt="Settings" /> </span>
+                    <span class="logout-icon"><img src="assets/logout_icon.png" alt="Logout" /> </span>
+                </div>
+            </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 </body>
-
-
-    // Play
-color: #00FFFF;
- font-size: 32px;
- font-family: Monospace;
- font-weight: 700;
- word-wrap: break-word
----
-// Chat
-color: #00FFFF;
- font-size: 32px;
- font-family: Monospace;
- font-weight: 700;
- word-wrap: break-word
----
-// Profile
-color: #00FFFF;
- font-size: 32px;
- font-family: Monospace;
- font-weight: 700;
- word-wrap: break-word
----
-// Match History
-color: #00FFFF;
- font-size: 32px;
- font-family: Monospace;
- font-weight: 700;
- word-wrap: break-word
----
-// Friends
-color: #00FFFF;
- font-size: 32px;
- font-family: Monospace;
- font-weight: 700;
- word-wrap: break-word
----
-// PLAY
-color: #DA00FE;
- font-size: 16px;
- font-family: Monospace;
- font-weight: 700;
- word-wrap: break-word
----
-// PONG
-color: #A100ED;
- font-size: 16px;
- font-family: Monospace;
- font-weight: 700;
- word-wrap: break-word
----
-// username
-color: white;
- font-size: 20px;
- font-family: Courier New;
- font-weight: 400;
- word-wrap: break-word
+</html>
