@@ -1,0 +1,28 @@
+{% load static %}
+{% block content %}
+<div class="page-content p-0 bg-img text-light text-center" id="editPage"><br><br>
+    <fieldset class="border rounded-5 p-2 mb-3 text-light text-break text-start d-inline-block"  style="background-color: rgba(0, 0, 0, 0.852);">
+        <legend class="display-6 float-none w-auto ps-2" style="color:white;">Profile</legend>
+        <form id="the_form" method="post" enctype="multipart/form-data" class="d-inline-block">
+            {% csrf_token %}
+            <div class="form-group form-control-sm py-1">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="usernameForm" placeholder="{{ user.login }}" readonly>
+            </div>
+            <div class="form-group form-control-sm py-1">
+                <label for="emailForm">Email</label>
+                <input type="email" class="form-control" id="emailForm" placeholder="{{ user.email }}" readonly style="width: 300px;">
+            </div>
+            <div class="form-group form-control-sm py-1">
+                <label for="2faForm">Two-Factor Authentication (2FA)</label>
+                <select class="form-select" id="2faForm" name="is_2fa_enabled">
+                    <option value="disable">disable</option>
+                    <option value="enable">enable</option>
+                </select>
+            </div>
+            <button id="save_btn" type="submit" class="btn btn-info m-2">Save</button>
+        </form>
+    </fieldset>
+</div>
+
+{% endblock content %}

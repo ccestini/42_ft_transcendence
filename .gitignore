@@ -1,0 +1,6 @@
+.DS_Store
+project/myapp/__pycache__
+project/myapp/migrations
+project/__pycache__
+project/project/__pycache__
+project/staticfiles

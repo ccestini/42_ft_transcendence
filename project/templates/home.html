@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% with is_home_page=True %}
+	{% block content %}
+    <div class="page-content bg-img text-light text-center" style="min-height: 100%;"><br>
+        <fieldset class="border rounded-5 px-3 text-light text-break text-center d-inline-block" style="background-color: rgba(0, 0, 0, 0.852);">
+            <legend class="display-6 float-none w-auto p-3" style="color:white;">The Game</legend>
+            <p>Pong is a 2D game simulating table tennis.</p>
+            <p>Players control paddles to hit the ball.</p>
+            <p>Points are earned when one fails to return the ball to the other side.</p>
+            <p>The goal is to reach 11 points before the opponent.</p>
+            <br>
+            <a id="tournament" class="btn btn-info mb-3">Tournament</a>
+            <a id="multi_player" class="btn btn-info mb-3">2 Players</a>
+            <a id="multi_player4" class="btn btn-info mb-3">4 Players</a>
+            <br><br>
+        </fieldset>
+        <br><br>
+    </div>
+
+		<script> 
+		if (window.location.href.includes("?code=")) {
+			window.history.replaceState({}, document.title, "/home");
+		}
+		const refreshFlag = document.getElementById('refreshFlag');
+		if(!refreshFlag){
+			window.location.reload();
+		}
+		console.log("Hello");
+		</script>
+	{% endblock %}
+{% endwith %}

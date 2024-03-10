@@ -1,0 +1,11 @@
+Django==4.2.1
+psycopg==3.1.8
+gunicorn==20.1.0
+django-sslserver==0.22
+django-crispy-forms
+crispy-bootstrap4
+requests
+django-cors-headers
+django-debug-toolbar
+djangorestframework
+djangorestframework-jwt

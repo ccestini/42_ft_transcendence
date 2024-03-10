@@ -1,0 +1,21 @@
+{% load static %}
+
+{% block navbar %}
+<nav class="navbar bg-black navbar-dark container-fluid p-0 m-0">
+    <!-- Logo and Home -->
+    <div class="nav-item navbar-brand px-3"><a  id="homeButton" class="nav-link" href="{% url 'home' %}"><img src="{% static 'logo_name.png' %}" alt="Logo" class="w-75"></a>
+    </div>
+    <!-- Info of user on navbar -->
+    <div class="nav-item px-3 dropdown ms-auto">
+        <a class="nav-link" href="#" id="profileDropdown" type="button" data-bs-toggle="dropdown">
+            <span class="navbar-text small">{{ user.login }}</span>
+            <img src="{% static 'avatar_icon.jpg' %}" alt="avatar2" class="rounded-pill" width="35px" height="35px" id="avatar_img">
+        </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end text-end">
+                <li><a class="dropdown-item" href="{% url 'edit' %}">User Profile</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-danger" href="{% url 'logout_view' %}">Logout</a></li>
+            </ul>
+    </div>
+</nav>
+{% endblock navbar %}
